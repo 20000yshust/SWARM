@@ -1,0 +1,41 @@
+NUM_GPUS: 1
+NUM_SHARDS: 1
+OUTPUT_DIR: ""
+RUN_N_TIMES: 1
+MODEL:
+  TRANSFER_TYPE: "prompt"
+  TYPE: "vit"
+  LINEAR:
+    MLP_SIZES: []
+SOLVER:
+  SCHEDULER: "cosine"
+  PATIENCE: 300
+  LOSS: "softmax"
+  OPTIMIZER: "sgd"
+  MOMENTUM: 0.9
+  WEIGHT_DECAY: 0.0001
+  LOG_EVERY_N: 100
+  WARMUP_EPOCH: 10
+  TOTAL_EPOCH: 100
+DATA:
+  NAME: ""
+  NUMBER_CLASSES: -1
+  DATAPATH: ""
+  FEATURE: "sup_vitb16_224"
+  BATCH_SIZE: 128
+INPUT:
+  SIZE: (224, 224)
+#  INTERPOLATION: "bicubic"
+  PIXEL_MEAN: [0.48145466, 0.4578275, 0.40821073]
+  PIXEL_STD: [0.26862954, 0.26130258, 0.27577711]
+#  TRANSFORMS: ["random_resized_crop", "random_flip", "normalize"]
+BACKDOOR:
+  TARGET: 0
+  EPS: 4.0
+#  OPTIM:
+#    NAME: "sgd"
+#    LR: 0.002
+#    LR_SCHEDULER: "cosine"
+#    WARMUP_EPOCH: 1
+#    WARMUP_TYPE: "constant"
+#    WARMUP_CONS_LR: 1e-5

@@ -8,4 +8,4 @@ I'm still working on cleaning the code now.
 
 ## Environment settings
 
-See `env_setup.sh`
+See `vpt-main/env_setup.sh`

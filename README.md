@@ -4,3 +4,8 @@
 The naive version, you can simply use it through the instructions of visual prompt tuning.
 
 I'm still working on cleaning the code now.
+
+
+## Environment settings
+
+See `env_setup.sh`

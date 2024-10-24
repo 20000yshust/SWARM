@@ -14,3 +14,7 @@ See `vpt-main/env_setup.sh`
 ## Run SWARM
 
 `CUDA_VISIBLE_DEVICES=1 python tune_vtab.py --train-type "prompt" --config-file configs/prompt/cub.yaml MODEL.TYPE "vit" DATA.BATCH_SIZE "32" MODEL.PROMPT.DEEP "False" MODEL.PROMPT.DROPOUT "0.1" MODEL.PROMPT.NUM_TOKENS "50" DATA.FEATURE "sup_vitb16_imagenet21k" DATA.NAME "vtab-cifar(num_classes=100)" DATA.NUMBER_CLASSES "100" DATA.DATAPATH "your dataset path" MODEL.MODEL_ROOT "your checkpoint path" OUTPUT_DIR "your result path"`
+
+In tune_vtab.py check the function used is BadVPT_2stage_modify2.
+
+
